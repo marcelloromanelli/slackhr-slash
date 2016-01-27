@@ -1,19 +1,25 @@
-# slack-lambda-weather
-Demonstrate Serverless Slack Slash Command Integration using AWS Lambda and AWS API Gateway. See [this blog post](http://www.ryanray.me/serverless-slack-integrations) for the full write up.
+# slackhr-slash
+Simple interface to query Cake HR directory using a slash command.
 
-## Getting Started
-This project was built with the [aws-lambda-starter](https://github.com/ryanray/aws-lambda-starter). See docs for more info on commands.
+### Usage
+It’s a slack slash command so you can use it as follow:
+
+	/slackhr [query here]
+	/slackhr today (will give a list of people absent today)
+	/slackhr 01-01-2016 to 10-01-2016 (January 1st 2016 and October 10th 2016)
+
+The range can be expressed in many ways:
+* Today, Tomorrow, Yesterday, Last Friday, etc
+* 17 August 2013 - 19 August 2013
+* This Friday
+* 5 days ago
+* Sat Aug 17 2013 18:40:39 GMT+0900 (JST)
+* 2014-11-30T08:15:30-05:30
 
 ### Prerequisites
 1. [AWS CLI](https://aws.amazon.com/cli/)
 2. Execution Role ARN for your Lambda
-3. Create a `config.json` based on `config.sample.json`. This file is gitignored by default because this is where you would put any api key's and other secret info that your lambda may need.
-
-To run tests you'll want to install jasmine and watch globally
-`npm install -g jasmine watch`
-
-Then you can run tests while watching files for changes:
-`npm run test:watch`
+3. Create a `config.json`. This file is gitignored by default because this is where you would put any api key's and other secret info that your lambda may need.
 
 ### Commands
 * `npm run create EXECUTION_ROLE_ARN` build and create your Lambda on AWS
@@ -26,8 +32,3 @@ Before you can create your Lambda you need to create an execution role. If you d
 
 ## Contributing
 Improvements are welcome! Just fork, push your changes to a new branch, and create a pull request!
-
-## TODO
-* Fix the tests
-# slackhr-slash
-# slackhr-slash
