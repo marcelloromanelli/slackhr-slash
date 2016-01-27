@@ -1,5 +1,7 @@
 # slackhr-slash
 Simple interface to query Cake HR directory using a slash command.
+![Example](./example.png)
+
 
 ### Usage
 It’s a slack slash command so you can use it as follow:
